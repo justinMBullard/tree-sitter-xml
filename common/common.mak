@@ -64,8 +64,8 @@ $(LANGUAGE_NAME).pc: ../bindings/c/$(LANGUAGE_NAME).pc.in
 		-e 's|@CMAKE_PROJECT_HOMEPAGE_URL@|$(HOMEPAGE_URL)|' \
 		-e 's|@CMAKE_INSTALL_PREFIX@|$(PREFIX)|'  $< > $@
 
-$(PARSER): $(SRC_DIR)/grammar.json
-	$(TS) generate $^
+$(PARSER): ../common/common.mjs grammar.js ./src/scanner.c ../common/scanner.h
+	$(TS) generate
 
 install: all
 	install -d '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter '$(DESTDIR)$(PCLIBDIR)' '$(DESTDIR)$(LIBDIR)'
