@@ -1,5 +1,5 @@
 ================================================================================
-Test to show value of attribute
+Attribute value content
 
 :language(xml)
 ================================================================================
@@ -8,7 +8,7 @@ Test to show value of attribute
 </root>
 --------------------------------------------------------------------------------
     (document
-      (element
+      root: (element
         (STag
           (Name))
         (content
