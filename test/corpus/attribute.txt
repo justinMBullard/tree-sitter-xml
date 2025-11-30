@@ -1,0 +1,24 @@
+================================================================================
+Test to show value of attribute
+
+:language(xml)
+================================================================================
+<root>
+   <field id="someid"/>
+</root>
+--------------------------------------------------------------------------------
+    (document
+      (element
+        (STag
+          (Name))
+        (content
+          (CharData)
+          (element
+            (EmptyElemTag
+              (Name)
+              (Attribute
+                (Name)
+                (AttValue))))
+          (CharData))
+        (ETag
+          (Name))))
